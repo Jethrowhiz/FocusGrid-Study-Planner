@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusGrid – Study Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⊞</span>
+                FocusGrid
+            </div>
+            <ul class="nav-links">
+                <li><a href="#today-focus">Today</a></li>
+                <li><a href="#weekly-grid">Week</a></li>
+                <li><a href="#burnout-check">Wellness</a></li>
+                <li><a href="#print-sheet">Print</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Animated background shapes -->
+        <div class="hero-bg">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Plan Less.<br>Study Better.</h1>
+            <p class="hero-subtitle">
+                A minimal study planner designed for focus and consistency. 
+                No distractions. No complexity. Just you and your goals.
+            </p>
+            <a href="#today-focus" class="scroll-button">
+                <span>Get Started</span>
+                <span class="arrow">↓</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Today's Focus Card Section -->
+    <section id="today-focus" class="today-focus">
+        <div class="container">
+            <h2 class="section-title">Today's Focus</h2>
+            
+            <div class="focus-grid">
+                <!-- Main Goal Card -->
+                <article class="focus-card main-goal-card">
+                    <div class="card-header">
+                        <h3 class="card-title">🎯 Main Goal</h3>
+                    </div>
+                    <div class="card-content">
+                        <input type="text" class="goal-input" placeholder="What's your main focus today?">
+                        <p class="example-text">e.g., Complete Chapter 3 of Physics</p>
+                    </div>
+                </article>
+
+                <!-- Top 3 Tasks Card -->
+                <article class="focus-card tasks-card">
+                    <div class="card-header">
+                        <h3 class="card-title">✓ Top 3 Tasks</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="task-item">
+                            <input type="checkbox" id="task1" class="task-checkbox">
+                            <label for="task1">Task 1: Study notes</label>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task2" class="task-checkbox">
+                            <label for="task2">Task 2: Practice problems</label>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task3" class="task-checkbox">
+                            <label for="task3">Task 3: Review concepts</label>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Study Time Blocks Card -->
+                <article class="focus-card time-blocks-card">
+                    <div class="card-header">
+                        <h3 class="card-title">⏱ Study Blocks</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="time-block">
+                            <input type="time" id="block-1" class="block-time-input" value="09:00">
+                            <div class="block-indicator"></div>
+                        </div>
+                        <div class="time-block">
+                            <input type="time" id="block-2" class="block-time-input" value="13:00">
+                            <div class="block-indicator"></div>
+                        </div>
+                        <div class="time-block">
+                            <input type="time" id="block-3" class="block-time-input" value="17:00">
+                            <div class="block-indicator"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Planner Grid Section -->
+    <section id="weekly-grid" class="weekly-planner">
+        <div class="container">
+            <h2 class="section-title">Weekly Plan</h2>
+            
+            <div class="week-grid">
+                <!-- Monday -->
+                <div class="day-column">
+                    <h3 class="day-header">Monday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Study Chapter">
+                        <select class="priority-select">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tuesday -->
+                <div class="day-column">
+                    <h3 class="day-header">Tuesday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology" selected>Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Cell Structure">
+                        <select class="priority-select">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Wednesday -->
+                <div class="day-column">
+                    <h3 class="day-header">Wednesday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Essay Writing">
+                        <select class="priority-select">
+                            <option value="high" selected>High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Thursday -->
+                <div class="day-column">
+                    <h3 class="day-header">Thursday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Literature Analysis">
+                        <select class="priority-select">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low" selected>Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Friday -->
+                <div class="day-column">
+                    <h3 class="day-header">Friday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics" selected>Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Problem Solving">
+                        <select class="priority-select">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Saturday -->
+                <div class="day-column">
+                    <h3 class="day-header">Saturday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry" selected>Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Lab Report">
+                        <select class="priority-select">
+                            <option value="high" selected>High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Sunday -->
+                <div class="day-column">
+                    <h3 class="day-header">Sunday</h3>
+                    <div class="subject-box">
+                        <select class="subject-select">
+                            <option value="">Select Subject</option>
+                            <optgroup label="Natural Sciences">
+                                <option value="Physics">Physics</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Earth Sciences">Earth Sciences</option>
+                                <option value="Astronomy">Astronomy</option>
+                            </optgroup>
+                            <optgroup label="Life Sciences">
+                                <option value="Botany">Botany</option>
+                                <option value="Zoology">Zoology</option>
+                                <option value="Microbiology">Microbiology</option>
+                                <option value="Genetics">Genetics</option>
+                                <option value="Ecology">Ecology</option>
+                            </optgroup>
+                            <optgroup label="Physical Sciences">
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Computer Science">Computer Science</option>
+                            </optgroup>
+                            <optgroup label="Social Sciences">
+                                <option value="Psychology">Psychology</option>
+                                <option value="Sociology">Sociology</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Political Science">Political Science</option>
+                                <option value="Anthropology">Anthropology</option>
+                            </optgroup>
+                            <optgroup label="Applied Sciences">
+                                <option value="Engineering">Engineering</option>
+                                <option value="Medicine">Medicine</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Environmental Science">Environmental Science</option>
+                            </optgroup>
+                            <optgroup label="Specialized Fields">
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Neuroscience">Neuroscience</option>
+                                <option value="Quantum Science">Quantum Science & Technology</option>
+                                <option value="Climate Science">Climate Science</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" class="task-input" placeholder="Task" value="Light Review">
+                        <select class="priority-select">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low" selected>Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Burnout Check Section -->
+    <section id="burnout-check" class="burnout-check">
+        <div class="container">
+            <h2 class="section-title">Wellness Check</h2>
+            
+            <div class="wellness-grid">
+                <!-- Sleep Tracker -->
+                <article class="wellness-card">
+                    <div class="wellness-header">
+                        <h3 class="wellness-title">😴 Sleep Tracker</h3>
+                    </div>
+                    <div class="wellness-content">
+                        <input type="number" class="sleep-input" min="0" max="12" placeholder="Hours slept">
+                        <p class="wellness-text">Recommended: 7-9 hours for optimal learning</p>
+                    </div>
+                </article>
+
+                <!-- Stress Level Scale -->
+                <article class="wellness-card">
+                    <div class="wellness-header">
+                        <h3 class="wellness-title">📊 Stress Level</h3>
+                    </div>
+                    <div class="wellness-content">
+                        <div class="stress-scale">
+                            <div class="stress-level level-1" title="Low"></div>
+                            <div class="stress-level level-2" title="Mild"></div>
+                            <div class="stress-level level-3" title="Moderate"></div>
+                            <div class="stress-level level-4" title="High"></div>
+                            <div class="stress-level level-5" title="Critical"></div>
+                        </div>
+                        <p class="wellness-text">Rate your stress: 1 (Low) to 5 (Critical)</p>
+                    </div>
+                </article>
+
+                <!-- Break Reminder -->
+                <article class="wellness-card">
+                    <div class="wellness-header">
+                        <h3 class="wellness-title">☕ Break Reminder</h3>
+                    </div>
+                    <div class="wellness-content">
+                        <p class="break-reminder-text">
+                            🎯 <strong>Pomodoro Tip:</strong> Study for 25 minutes, then take a 5-minute break. 
+                            After 4 cycles, take a longer 15-30 minute break.
+                        </p>
+                        <p class="wellness-text">Your brain needs rest to process information effectively.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Work Printable Sheet Section -->
+    <section id="print-sheet" class="deep-work-sheet">
+        <div class="container">
+            <h2 class="section-title">Deep Work Sheet</h2>
+            <p class="section-subtitle">Print this sheet for focused, distraction-free studying</p>
+            
+            <div class="printable-sheet">
+                <!-- Header -->
+                <div class="sheet-header">
+                    <h3 class="sheet-title">Deep Work Session</h3>
+                    <div class="sheet-meta">
+                        <div class="meta-input-group">
+                            <label for="session-date">Date:</label>
+                            <input type="date" id="session-date" class="sheet-meta-input">
+                        </div>
+                        <div class="meta-input-group">
+                            <label for="session-time">Time:</label>
+                            <input type="time" id="session-time" class="sheet-meta-input">
+                        </div>
+                        <div class="meta-input-group">
+                            <label for="session-duration">Duration:</label>
+                            <input type="text" id="session-duration" class="sheet-meta-input" placeholder="e.g., 90 min">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Section -->
+                <div class="sheet-section">
+                    <h4 class="sheet-section-title">📌 Main Task</h4>
+                    <textarea class="sheet-textarea" placeholder="What will you accomplish?" rows="4"></textarea>
+                </div>
+
+                <!-- Why It Matters -->
+                <div class="sheet-section">
+                    <h4 class="sheet-section-title">💡 Why It Matters</h4>
+                    <textarea class="sheet-textarea" placeholder="Why is this important to you?" rows="4"></textarea>
+                </div>
+
+                <!-- Reflection Notes -->
+                <div class="sheet-section">
+                    <h4 class="sheet-section-title">✍ Reflection</h4>
+                    <textarea class="sheet-textarea" placeholder="What did you learn? What's next?" rows="5"></textarea>
+                </div>
+
+                <!-- Print Button -->
+                <div class="print-button-container">
+                    <button class="print-button" onclick="window.print()">🖨 Print This Sheet</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 FocusGrid. Built with focus in mind. | No excuses. Just progress.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

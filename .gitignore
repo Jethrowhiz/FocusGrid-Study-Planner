@@ -1,0 +1,19 @@
+# Node / general
+node_modules/
+npm-debug.log*
+.yarn-integrity
+.env
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# OS
+*.log
+
+# Build
+dist/
+build/
+
+# OneDrive temp
+~$*
