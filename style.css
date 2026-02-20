@@ -1,28 +1,40 @@
 /* ===================================
-   FocusGrid – Study Planner CSS
+   FocusGrid - Study Planner CSS
    Modern, Minimal, Responsive Design
    =================================== */
 
 /* ===== CSS Variables (Root Colors & Spacing) ===== */
 :root {
     /* Color Palette */
-    --bg-primary: #F5F3F0;           /* Light beige background */
-    --bg-secondary: #FFFFFF;          /* Card backgrounds */
-    --bg-accent: #E8E5E1;             /* Subtle gray accent */
-    
-    --color-primary: #4A90A4;         /* Soft blue */
-    --color-secondary: #7BA99E;       /* Sage green */
-    --color-accent: #F4B183;          /* Warm accent */
-    
-    --text-primary: #2C2C2C;          /* Dark gray text */
-    --text-secondary: #5A5A5A;        /* Medium gray text */
-    --text-light: #888888;            /* Light gray text */
-    
+    --bg-primary: #F5F3F0;
+    /* Light beige background */
+    --bg-secondary: #FFFFFF;
+    /* Card backgrounds */
+    --bg-accent: #E8E5E1;
+    /* Subtle gray accent */
+
+    --color-primary: #4A90A4;
+    /* Soft blue */
+    --color-secondary: #7BA99E;
+    /* Sage green */
+    --color-accent: #F4B183;
+    /* Warm accent */
+
+    --text-primary: #2C2C2C;
+    /* Dark gray text */
+    --text-secondary: #5A5A5A;
+    /* Medium gray text */
+    --text-light: #888888;
+    /* Light gray text */
+
     /* Priority colors */
-    --priority-high: #E74C3C;         /* Red */
-    --priority-medium: #F39C12;       /* Orange */
-    --priority-low: #27AE60;          /* Green */
-    
+    --priority-high: #E74C3C;
+    /* Red */
+    --priority-medium: #F39C12;
+    /* Orange */
+    --priority-low: #27AE60;
+    /* Green */
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -30,7 +42,7 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-xxl: 4rem;
-    
+
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-size-sm: 0.875rem;
@@ -39,12 +51,12 @@
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
     --font-size-3xl: 3rem;
-    
+
     /* Effects */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
-    
+
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --border-radius: 12px;
@@ -80,7 +92,12 @@ a:hover {
 }
 
 /* ===== Typography ===== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: var(--spacing-md);
@@ -242,18 +259,39 @@ p {
 }
 
 @keyframes float1 {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-30px, 30px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-30px, 30px);
+    }
 }
 
 @keyframes float2 {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, -30px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
 }
 
 @keyframes float3 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-20px, 20px) scale(1.1); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(1.1);
+    }
 }
 
 .hero-content {
@@ -269,6 +307,7 @@ p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -317,8 +356,15 @@ p {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
 }
 
 /* ===== Today's Focus Section ===== */
@@ -365,41 +411,103 @@ p {
     flex-grow: 1;
 }
 
-.goal-input {
+.goal-helper-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.goal-textarea {
     width: 100%;
+    height: 350px;
     padding: var(--spacing-md);
-    border: 2px solid var(--bg-accent);
+    border: none;
     border-radius: 8px;
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     color: var(--text-primary);
-    margin-bottom: var(--spacing-sm);
-    background-color: var(--bg-primary);
-    transition: border-color var(--transition-fast);
-    cursor: not-allowed;
+    background-color: #F9F7F2;
+    resize: none;
+    transition: background-color var(--transition-fast);
 }
 
-.goal-input:focus {
+.goal-textarea:focus {
+    outline: none;
+    background-color: #F1EFE9;
+}
+
+.goal-textarea::placeholder {
+    color: var(--text-light);
+}
+
+/* Task Items */
+.add-task-container {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+#new-task-input {
+    flex-grow: 1;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--bg-accent);
+    border-radius: 8px;
+    background-color: var(--bg-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast);
+}
+
+#new-task-input:focus {
     outline: none;
     border-color: var(--color-primary);
 }
 
-.example-text {
-    font-size: var(--font-size-sm);
-    color: var(--text-light);
-    margin: 0;
+#add-task-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--bg-secondary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
 }
 
-/* Task Items */
+#add-task-btn:hover {
+    background-color: var(--color-secondary);
+}
+
 .task-item {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
-    padding: var(--spacing-sm) 0;
-    cursor: pointer;
-    transition: background-color var(--transition-fast);
     padding: var(--spacing-sm);
-    border-radius: 6px;
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-xs);
+    transition: transform var(--transition-fast);
+}
+
+.task-item:hover {
+    transform: translateX(4px);
+}
+
+.delete-btn {
+    padding: 2px 8px;
+    background: none;
+    border: none;
+    color: #E74C3C;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+}
+
+.delete-btn:hover {
+    opacity: 1;
 }
 
 .task-item:hover {
@@ -522,7 +630,7 @@ p {
     background-color: var(--bg-accent);
     border-radius: 18px;
     padding: 16px;
-    box-shadow: 0 8px 28px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.35);
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     min-height: 220px;
     display: flex;
@@ -533,7 +641,7 @@ p {
 
 .day-column:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 46px rgba(15,23,42,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+    box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .day-header {
@@ -563,7 +671,7 @@ p {
     transition: box-shadow var(--transition-fast), transform var(--transition-fast);
     width: calc(100% - 28px);
     text-transform: none;
-    box-shadow: 0 8px 20px rgba(15,23,42,0.04);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
     display: inline-block;
     text-align: center;
 }
@@ -600,7 +708,7 @@ p {
     text-align: center;
     font-weight: 700;
     color: var(--text-primary);
-    box-shadow: 0 8px 20px rgba(15,23,42,0.03);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.03);
 }
 
 .task-input {
@@ -612,7 +720,7 @@ p {
     text-align: center;
     font-weight: 600;
     color: var(--text-secondary);
-    box-shadow: 0 8px 18px rgba(15,23,42,0.03);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.03);
 }
 
 .priority-select:focus {
@@ -765,14 +873,7 @@ p {
     color: var(--text-light);
 }
 
-.break-reminder-text {
-    margin: 0;
-    color: var(--text-primary);
-    line-height: 1.8;
-    font-size: var(--font-size-base);
-}
-
-/* ===== Deep Work Printable Sheet ===== */
+/* ===== Post-Study Session Review ===== */
 .deep-work-sheet {
     padding: var(--spacing-xxl) var(--spacing-md);
     background-color: var(--bg-primary);
@@ -941,35 +1042,6 @@ p {
     margin-top: var(--spacing-sm);
 }
 
-.print-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: var(--spacing-xl);
-}
-
-.print-button {
-    padding: var(--spacing-md) var(--spacing-lg);
-    background-color: var(--color-primary);
-    color: var(--bg-secondary);
-    border: none;
-    border-radius: var(--border-radius);
-    font-family: var(--font-family);
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    box-shadow: var(--shadow-md);
-}
-
-.print-button:hover {
-    background-color: var(--color-secondary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-}
-
-.print-button:active {
-    transform: translateY(0);
-}
 
 /* ===== Footer ===== */
 .footer {
@@ -1111,120 +1183,5 @@ p {
 
     .timer-display {
         font-size: 1.5rem;
-    }
-}
-
-/* ===== Print Styles ===== */
-@media print {
-    /* Hide interactive elements */
-    .navbar,
-    .footer,
-    .scroll-button,
-    .print-button-container,
-    input[type="text"],
-    input[type="number"],
-    input[type="checkbox"],
-    .goal-input,
-    .sleep-input {
-        display: none !important;
-    }
-
-    /* Page setup */
-    body {
-        background-color: white;
-        color: black;
-    }
-
-    /* Reset colors */
-    * {
-        background-color: transparent !important;
-        box-shadow: none !important;
-    }
-
-    .hero,
-    .today-focus,
-    .weekly-planner,
-    .burnout-check,
-    .deep-work-sheet {
-        background-color: transparent;
-        padding: 0;
-    }
-
-    .container {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    /* Section breaks */
-    .today-focus,
-    .weekly-planner,
-    .burnout-check {
-        page-break-after: always;
-    }
-
-    /* Print sheet styling */
-    .printable-sheet {
-        box-shadow: none;
-        border: 1px solid #ccc;
-        padding: 2.5cm;
-        max-width: 100%;
-    }
-
-    .sheet-input-area {
-        border: 1px solid #ccc;
-        background-color: white;
-    }
-
-    .line {
-        background-color: #999;
-    }
-
-    .timer-box {
-        border: 2px solid #333;
-    }
-
-    /* Font sizing for print */
-    h1, .hero-title {
-        font-size: 28pt;
-    }
-
-    h2, .section-title {
-        font-size: 18pt;
-    }
-
-    h3, h4 {
-        font-size: 14pt;
-    }
-
-    p, body {
-        font-size: 11pt;
-    }
-
-    /* Card styling for print */
-    .focus-card,
-    .wellness-card,
-    .day-column {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-        margin-bottom: 1cm;
-    }
-
-    /* Margins for A4 printing */
-    @page {
-        margin: 2cm;
-        size: A4;
-    }
-
-    /* Prevent color printing issues */
-    .priority-tag,
-    .stress-level,
-    .day-header {
-        border: 1px solid #333;
-        color: black;
-    }
-
-    /* Hide empty checkboxes in print */
-    input[type="checkbox"] {
-        display: none;
     }
 }

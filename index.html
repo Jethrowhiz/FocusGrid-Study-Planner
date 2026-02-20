@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-icon">⊞</span>
+                <span class="logo-icon"> </span>
                 FocusGrid
             </div>
             <ul class="nav-links">
                 <li><a href="#today-focus">Today</a></li>
                 <li><a href="#weekly-grid">Week</a></li>
                 <li><a href="#burnout-check">Wellness</a></li>
-                <li><a href="#print-sheet">Print</a></li>
+                <li><a href="#study-review">Review</a></li>
             </ul>
         </div>
     </nav>
@@ -32,16 +34,16 @@
             <div class="shape shape-2"></div>
             <div class="shape shape-3"></div>
         </div>
-        
+
         <div class="hero-content">
-            <h1 class="hero-title">Plan Less.<br>Study Better.</h1>
+            <h1 class="hero-title">Study Better.<br>Study Smarter.</h1>
             <p class="hero-subtitle">
-                A minimal study planner designed for focus and consistency. 
+                A minimal study planner designed for focus and consistency.
                 No distractions. No complexity. Just you and your goals.
             </p>
             <a href="#today-focus" class="scroll-button">
                 <span>Get Started</span>
-                <span class="arrow">↓</span>
+                <span class="arrow"></span>
             </a>
         </div>
     </section>
@@ -50,36 +52,32 @@
     <section id="today-focus" class="today-focus">
         <div class="container">
             <h2 class="section-title">Today's Focus</h2>
-            
+
             <div class="focus-grid">
                 <!-- Main Goal Card -->
                 <article class="focus-card main-goal-card">
                     <div class="card-header">
-                        <h3 class="card-title">🎯 Main Goal</h3>
+                        <h3 class="card-title">Main Goal</h3>
                     </div>
                     <div class="card-content">
-                        <input type="text" class="goal-input" placeholder="What's your main focus today?">
-                        <p class="example-text">e.g., Complete Chapter 3 of Physics</p>
+                        <p class="goal-helper-text">Define your single most important objective for today. Clear goals
+                            lead to better focus.</p>
+                        <textarea class="goal-textarea" placeholder="What's your main focus today?"></textarea>
                     </div>
                 </article>
 
                 <!-- Top 3 Tasks Card -->
                 <article class="focus-card tasks-card">
                     <div class="card-header">
-                        <h3 class="card-title">✓ Top 3 Tasks</h3>
+                        <h3 class="card-title">Top 3 Tasks</h3>
                     </div>
                     <div class="card-content">
-                        <div class="task-item">
-                            <input type="checkbox" id="task1" class="task-checkbox">
-                            <label for="task1">Task 1: Study notes</label>
+                        <div class="add-task-container">
+                            <input type="text" id="new-task-input" placeholder="Add a new task...">
+                            <button id="add-task-btn">+</button>
                         </div>
-                        <div class="task-item">
-                            <input type="checkbox" id="task2" class="task-checkbox">
-                            <label for="task2">Task 2: Practice problems</label>
-                        </div>
-                        <div class="task-item">
-                            <input type="checkbox" id="task3" class="task-checkbox">
-                            <label for="task3">Task 3: Review concepts</label>
+                        <div id="task-list" class="task-list">
+                            <!-- Tasks will be added here dynamically -->
                         </div>
                     </div>
                 </article>
@@ -87,7 +85,7 @@
                 <!-- Study Time Blocks Card -->
                 <article class="focus-card time-blocks-card">
                     <div class="card-header">
-                        <h3 class="card-title">⏱ Study Blocks</h3>
+                        <h3 class="card-title">Study Blocks</h3>
                     </div>
                     <div class="card-content">
                         <div class="time-block">
@@ -112,7 +110,7 @@
     <section id="weekly-grid" class="weekly-planner">
         <div class="container">
             <h2 class="section-title">Weekly Plan</h2>
-            
+
             <div class="week-grid">
                 <!-- Monday -->
                 <div class="day-column">
@@ -506,12 +504,12 @@
     <section id="burnout-check" class="burnout-check">
         <div class="container">
             <h2 class="section-title">Wellness Check</h2>
-            
+
             <div class="wellness-grid">
                 <!-- Sleep Tracker -->
                 <article class="wellness-card">
                     <div class="wellness-header">
-                        <h3 class="wellness-title">😴 Sleep Tracker</h3>
+                        <h3 class="wellness-title">Sleep Tracker</h3>
                     </div>
                     <div class="wellness-content">
                         <input type="number" class="sleep-input" min="0" max="12" placeholder="Hours slept">
@@ -522,7 +520,7 @@
                 <!-- Stress Level Scale -->
                 <article class="wellness-card">
                     <div class="wellness-header">
-                        <h3 class="wellness-title">📊 Stress Level</h3>
+                        <h3 class="wellness-title">Stress Level</h3>
                     </div>
                     <div class="wellness-content">
                         <div class="stress-scale">
@@ -539,11 +537,11 @@
                 <!-- Break Reminder -->
                 <article class="wellness-card">
                     <div class="wellness-header">
-                        <h3 class="wellness-title">☕ Break Reminder</h3>
+                        <h3 class="wellness-title">Break Reminder</h3>
                     </div>
                     <div class="wellness-content">
                         <p class="break-reminder-text">
-                            🎯 <strong>Pomodoro Tip:</strong> Study for 25 minutes, then take a 5-minute break. 
+                            <strong>Pomodoro Tip:</strong> Study for 25 minutes, then take a 5-minute break.
                             After 4 cycles, take a longer 15-30 minute break.
                         </p>
                         <p class="wellness-text">Your brain needs rest to process information effectively.</p>
@@ -553,12 +551,12 @@
         </div>
     </section>
 
-    <!-- Deep Work Printable Sheet Section -->
-    <section id="print-sheet" class="deep-work-sheet">
+    <!-- Study Session Review Section -->
+    <section id="study-review" class="deep-work-sheet">
         <div class="container">
-            <h2 class="section-title">Deep Work Sheet</h2>
-            <p class="section-subtitle">Print this sheet for focused, distraction-free studying</p>
-            
+            <h2 class="section-title">Session Review</h2>
+            <p class="section-subtitle">Reflect on your progress and capture key takeaways after your study session</p>
+
             <div class="printable-sheet">
                 <!-- Header -->
                 <div class="sheet-header">
@@ -574,33 +572,30 @@
                         </div>
                         <div class="meta-input-group">
                             <label for="session-duration">Duration:</label>
-                            <input type="text" id="session-duration" class="sheet-meta-input" placeholder="e.g., 90 min">
+                            <input type="text" id="session-duration" class="sheet-meta-input"
+                                placeholder="e.g., 90 min">
                         </div>
                     </div>
                 </div>
 
                 <!-- Task Section -->
                 <div class="sheet-section">
-                    <h4 class="sheet-section-title">📌 Main Task</h4>
+                    <h4 class="sheet-section-title"> Main Task</h4>
                     <textarea class="sheet-textarea" placeholder="What will you accomplish?" rows="4"></textarea>
                 </div>
 
                 <!-- Why It Matters -->
                 <div class="sheet-section">
-                    <h4 class="sheet-section-title">💡 Why It Matters</h4>
+                    <h4 class="sheet-section-title"> Why It Matters</h4>
                     <textarea class="sheet-textarea" placeholder="Why is this important to you?" rows="4"></textarea>
                 </div>
 
                 <!-- Reflection Notes -->
                 <div class="sheet-section">
-                    <h4 class="sheet-section-title">✍ Reflection</h4>
+                    <h4 class="sheet-section-title"> Reflection</h4>
                     <textarea class="sheet-textarea" placeholder="What did you learn? What's next?" rows="5"></textarea>
                 </div>
 
-                <!-- Print Button -->
-                <div class="print-button-container">
-                    <button class="print-button" onclick="window.print()">🖨 Print This Sheet</button>
-                </div>
             </div>
         </div>
     </section>
@@ -612,5 +607,61 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const taskInput = document.getElementById('new-task-input');
+            const addTaskBtn = document.getElementById('add-task-btn');
+            const taskList = document.getElementById('task-list');
+
+            let taskCount = 0;
+
+            const addTask = (text = null) => {
+                const taskText = text || taskInput.value.trim();
+
+                if (taskText === "") return;
+
+                if (taskCount >= 3) {
+                    if (!text) alert("You've reached the limit of 3 tasks for Today's Focus!");
+                    return;
+                }
+
+                taskCount++;
+                const taskId = `task-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+
+                const taskItem = document.createElement('div');
+                taskItem.className = 'task-item';
+                taskItem.innerHTML = `
+                    <input type="checkbox" id="${taskId}" class="task-checkbox">
+                    <label for="${taskId}">${taskText}</label>
+                    <button class="delete-btn" title="Delete Task">x</button>
+                `;
+
+                // Delete functionality
+                taskItem.querySelector('.delete-btn').addEventListener('click', () => {
+                    taskItem.remove();
+                    taskCount--;
+                });
+
+                taskList.appendChild(taskItem);
+                if (!text) {
+                    taskInput.value = "";
+                    taskInput.focus();
+                }
+            };
+
+            // Add three default tasks on load
+            addTask("Review previous lesson notes");
+            addTask("Practice coding exercises");
+            addTask("Plan tomorrow's schedule");
+
+            addTaskBtn.addEventListener('click', () => addTask());
+
+            taskInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') addTask();
+            });
+        });
+    </script>
+
 </body>
+
 </html>
